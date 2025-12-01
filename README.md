@@ -5,7 +5,7 @@
 ![Estado del Proyecto](https://img.shields.io/badge/Estado-Activo-success?style=flat-square)
 ![Licencia](https://img.shields.io/badge/Licencia-MIT-blue?style=flat-square)
 
-## 📖 Descripción
+## 📖 Descripción.
 
 Este repositorio aloja el código fuente de una **Single Page Application (SPA)** ligera que actúa como centro de mando ("Dashboard"). Su objetivo es organizar y presentar de manera visual y accesible las diversas herramientas y juegos desarrollados, facilitando el acceso rápido a cada despliegue.
 
