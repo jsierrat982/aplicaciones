@@ -3,37 +3,37 @@ const appsConfig = [
     {
         name: "Ahorro",
         url: "https://jsierrat982.github.io/ahorro/",
-        image: "https://via.placeholder.com/400x200/2563eb/ffffff?text=Ahorro", // Reemplazar con captura real
+        image: "./assets/ahorro.png", // <--- CAMBIO AQUÍ
         alt: "Interfaz de la aplicación de Ahorro"
     },
     {
         name: "King",
         url: "https://jsierrat982.github.io/king/",
-        image: "https://via.placeholder.com/400x200/2563eb/ffffff?text=King",
+        image: "./assets/king.png",   // <--- CAMBIO AQUÍ
         alt: "Interfaz de la aplicación King"
     },
     {
         name: "Prudencia Game",
         url: "https://jsierrat982.github.io/prudencia-game/",
-        image: "https://via.placeholder.com/400x200/2563eb/ffffff?text=Prudencia",
+        image: "./assets/prudencia.png", // <--- CAMBIO AQUÍ
         alt: "Juego de Prudencia"
     },
     {
         name: "Calculadora",
         url: "https://jsierrat982.github.io/calculadora/",
-        image: "https://via.placeholder.com/400x200/2563eb/ffffff?text=Calculadora",
+        image: "./assets/calculadora.png", // <--- CAMBIO AQUÍ
         alt: "Herramienta de Calculadora"
     },
     {
         name: "Control Pagos",
         url: "https://jsierrat982.github.io/control-pagos/",
-        image: "https://via.placeholder.com/400x200/2563eb/ffffff?text=Control+Pagos",
+        image: "./assets/pagos.png",   // <--- CAMBIO AQUÍ
         alt: "Sistema de control de pagos"
     },
     {
         name: "Bingo",
         url: "https://jsierrat982.github.io/bingo/",
-        image: "https://via.placeholder.com/400x200/2563eb/ffffff?text=Bingo",
+        image: "./assets/bingo.png",   // <--- CAMBIO AQUÍ
         alt: "Juego de Bingo"
     }
 ];
@@ -79,4 +79,5 @@ const renderDashboard = async () => {
 };
 
 // Inicialización cuando el DOM esté listo
+
 document.addEventListener('DOMContentLoaded', renderDashboard);
