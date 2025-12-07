@@ -1,41 +1,41 @@
-// Configuración de las aplicaciones
+// Configuración de las aplicaciones - REORDENADO
 const appsConfig = [
-       {
-        name: "King",
-        url: "https://jsierrat982.github.io/king/",
-        image: "./assets/king.png",   // <--- CAMBIO AQUÍ
-        alt: "Interfaz de la aplicación King"
-    },
     {
         name: "Prudencia Game",
         url: "https://jsierrat982.github.io/prudencia-game/",
-        image: "./assets/prudencia.png", // <--- CAMBIO AQUÍ
+        image: "./assets/prudencia.png", 
         alt: "Juego de Prudencia"
+    },
+    {
+        name: "King",
+        url: "https://jsierrat982.github.io/king/",
+        image: "./assets/king.png",   
+        alt: "Interfaz de la aplicación King"
     },
     {
         name: "Bingo",
         url: "https://jsierrat982.github.io/bingo/",
-        image: "./assets/bingo.png",   // <--- CAMBIO AQUÍ
+        image: "./assets/bingo.png",   
         alt: "Juego de Bingo"
-    }
+    },
+    {
+        name: "Ahorro",
+        url: "https://jsierrat982.github.io/ahorro/",
+        image: "./assets/ahorro.png", 
+        alt: "Interfaz de la aplicación de Ahorro"
+    },
     {
         name: "Calculadora",
         url: "https://jsierrat982.github.io/calculadora/",
-        image: "./assets/calculadora.png", // <--- CAMBIO AQUÍ
+        image: "./assets/calculadora.png", 
         alt: "Herramienta de Calculadora"
     },
     {
         name: "Control Pagos",
         url: "https://jsierrat982.github.io/control-pagos/",
-        image: "./assets/pagos.png",   // <--- CAMBIO AQUÍ
+        image: "./assets/pagos.png",   
         alt: "Sistema de control de pagos"
-    },
-     {
-        name: "Ahorro",
-        url: "https://jsierrat982.github.io/ahorro/",
-        image: "./assets/ahorro.png", // <--- CAMBIO AQUÍ
-        alt: "Interfaz de la aplicación de Ahorro"
-    },
+    }
 ];
 
 // Función constructora de tarjetas (Arrow Function)
@@ -46,9 +46,10 @@ const createCard = (app) => {
 
     // Construcción del HTML interno usando Template Literals
     // Nota: Usamos <a> envolvente para mejorar el área de clic en UX móvil
+    // Se incluye un manejador de error para la imagen por si no existe localmente
     article.innerHTML = `
         <a href="${app.url}" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="Ir a la aplicación ${app.name}">
-            <img src="${app.image}" alt="${app.alt}" class="card-image" loading="lazy">
+            <img src="${app.image}" alt="${app.alt}" class="card-image" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=${encodeURIComponent(app.name)}'">
             <div class="card-content">
                 <h3 class="card-title">${app.name}</h3>
                 <span class="card-cta">Abrir Aplicación &rarr;</span>
@@ -79,6 +80,4 @@ const renderDashboard = async () => {
 };
 
 // Inicialización cuando el DOM esté listo
-
 document.addEventListener('DOMContentLoaded', renderDashboard);
-
