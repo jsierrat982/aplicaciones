@@ -1,12 +1,6 @@
 // Configuración de las aplicaciones
 const appsConfig = [
-    {
-        name: "Ahorro",
-        url: "https://jsierrat982.github.io/ahorro/",
-        image: "./assets/ahorro.png", // <--- CAMBIO AQUÍ
-        alt: "Interfaz de la aplicación de Ahorro"
-    },
-    {
+       {
         name: "King",
         url: "https://jsierrat982.github.io/king/",
         image: "./assets/king.png",   // <--- CAMBIO AQUÍ
@@ -19,6 +13,12 @@ const appsConfig = [
         alt: "Juego de Prudencia"
     },
     {
+        name: "Bingo",
+        url: "https://jsierrat982.github.io/bingo/",
+        image: "./assets/bingo.png",   // <--- CAMBIO AQUÍ
+        alt: "Juego de Bingo"
+    }
+    {
         name: "Calculadora",
         url: "https://jsierrat982.github.io/calculadora/",
         image: "./assets/calculadora.png", // <--- CAMBIO AQUÍ
@@ -30,12 +30,12 @@ const appsConfig = [
         image: "./assets/pagos.png",   // <--- CAMBIO AQUÍ
         alt: "Sistema de control de pagos"
     },
-    {
-        name: "Bingo",
-        url: "https://jsierrat982.github.io/bingo/",
-        image: "./assets/bingo.png",   // <--- CAMBIO AQUÍ
-        alt: "Juego de Bingo"
-    }
+     {
+        name: "Ahorro",
+        url: "https://jsierrat982.github.io/ahorro/",
+        image: "./assets/ahorro.png", // <--- CAMBIO AQUÍ
+        alt: "Interfaz de la aplicación de Ahorro"
+    },
 ];
 
 // Función constructora de tarjetas (Arrow Function)
@@ -81,3 +81,4 @@ const renderDashboard = async () => {
 // Inicialización cuando el DOM esté listo
 
 document.addEventListener('DOMContentLoaded', renderDashboard);
+
