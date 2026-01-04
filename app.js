@@ -1,4 +1,5 @@
-// Configuración de las aplicaciones - REORDENADO
+// Configuración de las aplicaciones - ACTUALIZADO
+// Se han eliminado: Ahorro, Calculadora y Control Pagos
 const appsConfig = [
     {
         name: "Prudencia Game",
@@ -17,24 +18,6 @@ const appsConfig = [
         url: "https://jsierrat982.github.io/bingo/",
         image: "./assets/bingo.png",   
         alt: "Juego de Bingo"
-    },
-    {
-        name: "Ahorro",
-        url: "https://jsierrat982.github.io/ahorro/",
-        image: "./assets/ahorro.png", 
-        alt: "Interfaz de la aplicación de Ahorro"
-    },
-    {
-        name: "Calculadora",
-        url: "https://jsierrat982.github.io/calculadora/",
-        image: "./assets/calculadora.png", 
-        alt: "Herramienta de Calculadora"
-    },
-    {
-        name: "Control Pagos",
-        url: "https://jsierrat982.github.io/control-pagos/",
-        image: "./assets/pagos.png",   
-        alt: "Sistema de control de pagos"
     }
 ];
 
@@ -45,8 +28,7 @@ const createCard = (app) => {
     article.className = 'app-card';
 
     // Construcción del HTML interno usando Template Literals
-    // Nota: Usamos <a> envolvente para mejorar el área de clic en UX móvil
-    // Se incluye un manejador de error para la imagen por si no existe localmente
+    // Nota: El manejo de errores en la imagen asegura que no se rompa el layout si falta un asset
     article.innerHTML = `
         <a href="${app.url}" class="card-link" target="_blank" rel="noopener noreferrer" aria-label="Ir a la aplicación ${app.name}">
             <img src="${app.image}" alt="${app.alt}" class="card-image" loading="lazy" onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=${encodeURIComponent(app.name)}'">
@@ -67,6 +49,9 @@ const renderDashboard = async () => {
     const fragment = document.createDocumentFragment();
 
     try {
+        // Limpiamos el contenedor por seguridad antes de renderizar
+        gridContainer.innerHTML = ''; 
+
         appsConfig.forEach(app => {
             const card = createCard(app);
             fragment.appendChild(card);
