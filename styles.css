@@ -1,17 +1,13 @@
 :root {
-    /* Paleta Oscura */
-    --color-primary: #60a5fa; /* Azul claro neón */
-    --color-secondary: #3b82f6;
-    --color-bg: #0f172a;      /* Fondo muy oscuro (Slate 900) */
-    --color-card-bg: #1e293b; /* Fondo tarjeta (Slate 800) */
-    --color-text-main: #f1f5f9; /* Texto casi blanco */
-    --color-text-light: #94a3b8;
-    
-    /* Sombras más sutiles para fondo oscuro */
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-    
-    --radius: 16px; /* Bordes un poco más redondeados */
+    --color-primary: #7c3aed; /* Violeta */
+    --color-secondary: #6d28d9;
+    --color-bg: #f3f4f6;
+    --color-card-bg: #ffffff;
+    --color-text-main: #111827;
+    --color-text-light: #6b7280;
+    --shadow-sm: 0 4px 6px -1px rgba(124, 58, 237, 0.1); /* Sombra con tinte violeta */
+    --shadow-md: 0 10px 15px -3px rgba(124, 58, 237, 0.2);
+    --radius: 20px;
     --spacing-container: 1rem;
 }
 * {
@@ -135,4 +131,5 @@ body {
     color: var(--color-primary);
     text-decoration: none;
 }
+
 
