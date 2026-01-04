@@ -1,17 +1,19 @@
-/* --- Variables & Reset --- */
 :root {
-    --color-primary: #2563eb;
-    --color-secondary: #1e40af;
-    --color-bg: #f8fafc;
-    --color-card-bg: #ffffff;
-    --color-text-main: #1e293b;
-    --color-text-light: #64748b;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-    --radius: 12px;
+    /* Paleta Oscura */
+    --color-primary: #60a5fa; /* Azul claro neón */
+    --color-secondary: #3b82f6;
+    --color-bg: #0f172a;      /* Fondo muy oscuro (Slate 900) */
+    --color-card-bg: #1e293b; /* Fondo tarjeta (Slate 800) */
+    --color-text-main: #f1f5f9; /* Texto casi blanco */
+    --color-text-light: #94a3b8;
+    
+    /* Sombras más sutiles para fondo oscuro */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    
+    --radius: 16px; /* Bordes un poco más redondeados */
     --spacing-container: 1rem;
 }
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -133,3 +135,4 @@ body {
     color: var(--color-primary);
     text-decoration: none;
 }
+
