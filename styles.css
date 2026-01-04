@@ -13,6 +13,7 @@
     
     --radius: 16px; /* Bordes un poco más redondeados */
     --spacing-container: 1rem;
+    --font-main: 'Poppins', sans-serif;
 }
 * {
     box-sizing: border-box;
@@ -21,7 +22,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    /* Usamos la variable que acabamos de crear */
+    font-family: var(--font-main);
+    
+    /* El resto de tus estilos se mantienen igual */
     background-color: var(--color-bg);
     color: var(--color-text-main);
     line-height: 1.6;
@@ -143,6 +147,7 @@ body {
     color: var(--color-primary);
     text-decoration: none;
 }
+
 
 
 
